@@ -10,7 +10,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(of="id")
-public class Subscripbtion {
+public class Subscription {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,4 +21,9 @@ public class Subscripbtion {
     private Event event;
 
     private String participantEmail;
+
+    public Subscription(Event event, String participantEmail) {
+        this.event = event;
+        this.participantEmail = participantEmail;
+    }
 }
